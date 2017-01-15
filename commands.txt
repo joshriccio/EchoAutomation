@@ -3,4 +3,5 @@ Alexa tell Raspberry Pie to turn the light off
 Alexa tell Raspberry Pie to report
 Alexa ask Raspberry Pie where the dog is
 Alexa ask Raspberry Pie when the garage door opened
-
+Alexa tell Raspberry Pi to text me when the dog comes in
+Alexa tell Raspberry Pi to text me Software jobs in Tucson
