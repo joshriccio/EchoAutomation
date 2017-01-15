@@ -1,0 +1,14 @@
+{
+    "intents": [{
+        "intent": "GPIOControlIntent",
+        
+		"slots": [{
+            "name": "status",
+            "type": "GPIO_CONTROL"
+        },
+                  {
+            "name": "pin",
+            "type": "AMAZON.NUMBER"
+        }]
+    }]
+}
