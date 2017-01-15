@@ -3,6 +3,8 @@ from flask_ask import Ask, statement, convert_errors
 import RPi.GPIO as GPIO
 import logging
 import doorState as door
+import launchdetectdoor
+import sendtext
 
 GPIO.setmode(GPIO.BCM)
 
@@ -53,6 +55,16 @@ def report_control():
 def report_control(door_name):                                                                                                
     time = door.getDoorTime()                                                                                      
     return statement('The {} opened at {}'.format(door_name, time))                                                   
+
+@ask.intent('SMSIntent', mapping={'object_name': 'object_name'})                                                 
+def report_control(object_name):
+    launchdetectdoor.startmonitor("The dog came in")                                                                                
+    return statement('Alright, I will text you when the {} comes in'.format(object_name)) 
+
+@ask.intent('JobIntent', mapping={'city': 'city', 'job': 'job'})                                              
+def report_control(city, job):                                                                              
+    sendtext.sendText("Here are the jobs I found https://www.indeed.com/jobs?q=software+engineer&l=Tucson%2C+AZ")
+    return statement('Alright, I will find you a {} job in {}'.format(job, city))
 
 if __name__=='__main__':
     port=5000 # this may be different

@@ -44,7 +44,7 @@ def writeToFile():
     _file.write(printPos() +" "+ t)
     _file.close()
 
-for a in range(1000):
+while 1:
     x = acc.getValueX()
     y = acc.getValueY()
     z = acc.getValueZ()
