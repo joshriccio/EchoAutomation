@@ -1,0 +1,6 @@
+GPIOControlIntent to turn the light {status}
+ReportIntent to report 
+DoorIntent when the {door_name} opened
+DoggyDoorIntent where is the dog
+SMSIntent to text me when the {object_name} comes in
+JobIntent to text me {job} jobs in {city}
