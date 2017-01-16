@@ -51,17 +51,17 @@ def report_control():
     else:
         return statement('The dog came inside at {}'.format(time))
 
-@ask.intent('DoorIntent', mapping={'door_name': 'door_name'})                                                                 
+@ask.intent('DoorIntent', mapping={'door_name': 'door_name'})
 def report_control(door_name):                                                                                                
     time = door.getDoorTime()                                                                                      
     return statement('The {} opened at {}'.format(door_name, time))                                                   
 
-@ask.intent('SMSIntent', mapping={'object_name': 'object_name'})                                                 
+@ask.intent('SMSIntent', mapping={'object_name': 'object_name'})
 def report_control(object_name):
     launchdetectdoor.startmonitor("The dog came in")                                                                                
-    return statement('Alright, I will text you when the {} comes in'.format(object_name)) 
+    return statement('Alright, I will text you when the {} comes in'.format(object_name))
 
-@ask.intent('JobIntent', mapping={'city': 'city', 'job': 'job'})                                              
+@ask.intent('JobIntent', mapping={'city': 'city', 'job': 'job'})
 def report_control(city, job):                                                                              
     sendtext.sendText("Here are the jobs I found https://www.indeed.com/jobs?q=software+engineer&l=Tucson%2C+AZ")
     return statement('Alright, I will find you a {} job in {}'.format(job, city))
