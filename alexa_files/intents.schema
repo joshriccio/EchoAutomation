@@ -1,14 +1,43 @@
 {
-    "intents": [{
-        "intent": "GPIOControlIntent",
+    "intents": [{                                                               
+        "intent": "GPIOControlIntent",                                          
+                                                                                
+        "slots": [{
+            "name": "status",                                                   
+            "type": "GPIO_CONTROL"                                              
+        },                                                                      
+                  {                                                             
+            "name": "pin",                                                      
+            "type": "AMAZON.NUMBER"                                             
+        }]                                                                      
+    },{                                                               
+        "intent": "ReportIntent"                                        
+                                                                                                                             
+    },{
+     	"intent": "DoorIntent", 
         
-		"slots": [{
-            "name": "status",
-            "type": "GPIO_CONTROL"
-        },
-                  {
-            "name": "pin",
-            "type": "AMAZON.NUMBER"
-        }]
+      	"slots": [{
+            "name": "door_name",                                                   
+            "type": "DOOR_TYPE"                                              
+        }]  
+    },{
+     	"intent": "DoggyDoorIntent"
+    },{
+     	"intent": "SMSIntent",
+         
+      	"slots": [{
+            "name": "object_name",                                                   
+            "type": "OBJECT_NAME"                                              
+        }]  
+    },{
+     	"intent": "JobIntent",
+         
+      	"slots": [{
+            "name": "city",                                                   
+            "type": "CITY_NAME"                                              
+        },{
+            "name": "job",                                                   
+            "type": "JOB_TYPE"                                              
+        }]  
     }]
 }
