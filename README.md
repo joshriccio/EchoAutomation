@@ -14,3 +14,6 @@ Home automation using Amazon echo. To get this project running on your own echo,
 4. copy the ngrok url into your configuration on your skill page, the ngrok url looks like this https://34b49265.ngrok.io
 
 Then give your alexa any of your utterances and wait for a response.
+
+Here is the layout for the Raspberry Pi and sensors
+![Alt text](/echoAutomation_schem.png?raw=true "RaspberryPi_Layout")
