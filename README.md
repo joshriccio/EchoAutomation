@@ -8,7 +8,7 @@ Home automation using Amazon echo. To get this project running on your own echo,
 5. under sll use  "My development endpoint is a sub-domain of a domain that has a wildcard certificate from a certificate authority"
 
 - Raspberry Pi - 
-1. Wire any sensors and LEDs to your raspberry pi
+1. Wire the sensors and LEDs to your raspberry pi - see echoAutomation_schem.png for my layout
 2. if your sensors require i2c, i will have i2c instructions here in the next few days
 3. start gpio_control.py, moving.py, and ./ngrok
 4. copy the ngrok url into your configuration on your skill page, the ngrok url looks like this https://34b49265.ngrok.io
